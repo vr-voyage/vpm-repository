@@ -41,7 +41,7 @@ jobs:
       - name: Run Python script
         run: |
           mkdir output
-          cp Website/* output/
+          cp Website/* index.json output/
           python create-site.py index.json output
 
       - name: Setup Pages
