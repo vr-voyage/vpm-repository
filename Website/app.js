@@ -1,33 +1,13 @@
+#from Cheetah.Template import Template
+#extends Template
+#import json
+
 import { baseLayerLuminance, StandardLuminance } from 'https://unpkg.com/@fluentui/web-components';
 
-const LISTING_URL = "{{ listingInfo.Url }}";
+const LISTING_URL = "$repository['url']";
 
-const PACKAGES = {
-{{~ for package in packages ~}}
-  "{{ package.Name }}": {
-    name: "{{ package.Name }}",
-    displayName: "{{ if package.DisplayName; package.DisplayName; end; }}",
-    description: "{{ if package.Description; package.Description; end; }}",
-    version: "{{ package.Version }}",
-    author: {
-      name: "{{ if package.Author.Name; package.Author.Name; end; }}",
-      url: "{{ if package.Author.Url; package.Author.Url; end; }}",
-    },
-    dependencies: {
-      {{~ for dependency in package.Dependencies ~}}
-        "{{ dependency.Name }}": "{{ dependency.Version }}",
-      {{~ end ~}}
-    },
-    keywords: [
-      {{~ for keyword in package.Keywords ~}}
-        "{{ keyword }}",
-      {{~ end ~}}
-    ],
-    license: "{{ package.License }}",
-    licensesUrl: "{{ package.LicensesUrl }}",
-  },
-{{~ end ~}}
-};
+const PACKAGES = #echo json.dumps($repository['packages'], indent=4)
+
 
 const setTheme = () => {
   const isDarkTheme = () => window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -88,7 +68,7 @@ const setTheme = () => {
   });
 
   const vccAddRepoButton = document.getElementById('vccAddRepoButton');
-  vccAddRepoButton.addEventListener('click', () => window.location.assign(`vcc://vpm/addRepo?url=${encodeURIComponent(LISTING_URL)}`));
+  vccAddRepoButton.addEventListener('click', () => window.location.assign('vcc://vpm/addRepo?url=$encoded_repository_url'));
 
   const vccUrlFieldCopy = document.getElementById('vccUrlFieldCopy');
   vccUrlFieldCopy.addEventListener('click', () => {
@@ -112,8 +92,10 @@ const setTheme = () => {
   rowMenuButtons.forEach(button => {
     button.addEventListener('click', e => {
       if (rowMoreMenu?.hidden) {
+        #raw
         rowMoreMenu.style.top = `${e.clientY + e.target.clientHeight}px`;
         rowMoreMenu.style.left = `${e.clientX - 120}px`;
+        #end raw
         rowMoreMenu.hidden = false;
 
         const downloadLink = rowMoreMenu.querySelector('#rowMoreMenuDownload');
@@ -155,7 +137,7 @@ const setTheme = () => {
 
   const rowAddToVccButtons = document.querySelectorAll('.rowAddToVccButton');
   rowAddToVccButtons.forEach((button) => {
-    button.addEventListener('click', () => window.location.assign(`vcc://vpm/addRepo?url=${encodeURIComponent(LISTING_URL)}`));
+    button.addEventListener('click', () => window.location.assign('vcc://vpm/addRepo?url=$encoded_repository_url'));
   });
 
   const rowPackageInfoButton = document.querySelectorAll('.rowPackageInfoButton');
@@ -163,10 +145,12 @@ const setTheme = () => {
     button.addEventListener('click', e => {
       const packageId = e.target.dataset?.packageId;
       const packageInfo = PACKAGES?.[packageId];
+      #raw
       if (!packageInfo) {
         console.error(`Did not find package ${packageId}. Packages available:`, PACKAGES);
         return;
       }
+
 
       packageInfoName.textContent = packageInfo.displayName;
       packageInfoId.textContent = packageId;
@@ -229,3 +213,4 @@ const setTheme = () => {
     addListingToVccHelp.hidden = false;
   });
 })();
+#end raw

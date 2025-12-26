@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     branches: main
-    paths: source.json
+    paths: index.json
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
@@ -32,32 +32,30 @@ jobs:
     steps:
       
       - uses: actions/checkout@v4 # check out this repo
-      - uses: actions/checkout@v4 # check out automation repo
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
         with:
-          repository: vrchat-community/package-list-action
-          path: ${{env.pathToCi}}
-          clean: false # otherwise the local repo will no longer be checked out
-          
-      - name: Restore Cache
-        uses: actions/cache@v4
-        with:
-          path: |
-            ${{env.pathToCi}}/.nuke/temp
-            ~/.nuget/packages
-          key: ${{ runner.os }}-${{ hashFiles('**/global.json', '**/*.csproj') }}
-          
-      - name: Build Package Version Listing
-        run: ${{env.pathToCi}}/build.cmd BuildMultiPackageListing --root ${{env.pathToCi}} --list-publish-directory $GITHUB_WORKSPACE/${{env.listPublishDirectory}}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
- 
+          python-version: '3.x'
+      
+      - name: Install dependencies
+        run: |
+          pip install package1 package2 package3
+          # Add any other pip installations you need
+      
+      - name: Run Python script
+        run: |
+          mkdir output
+          cp Website/* output/
+          python create-site.py index.json output
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
         
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ${{env.listPublishDirectory}}
+          path: output
           
       - name: Deploy to GitHub Pages
         id: deployment

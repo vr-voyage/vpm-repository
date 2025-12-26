@@ -2,7 +2,7 @@
     "name": "Voyage Voyage VRChat Gimmicks",
     "id": "io.github.vr-voyage",
     "url": "https://vr-voyage.github.io/vpm-repository/index.json",
-    "author": "@voyagevoyage_vr",
+    "author": "Voyage Voyage",
     "packages": {
         "io.github.vr-voyage.vrchat.glb-loader": {
             "versions": {
@@ -141,63 +141,6 @@
                     "unity": "2022.3",
                     "unityRelease": "6f1",
                     "url": "https://github.com/vr-voyage/vrchat-glb-loader-tests/releases/download/v1.0.0/vrchat-glb-loader-tests-v1.0.0.zip"
-                }
-            }
-        },
-        "com.vrmc.univrm": {
-            "versions": {
-                "0.128.1": {
-                    "name": "com.vrmc.univrm",
-                    "version": "0.128.1",
-                    "displayName": "VRM",
-                    "description": "VRM importer",
-                    "unity": "2021.3",
-                    "keywords": [
-                        "vrm",
-                        "importer",
-                        "avatar",
-                        "vr"
-                    ],
-                    "author": {
-                        "name": "VRM Consortium"
-                    },
-                    "dependencies": {
-                        "com.vrmc.gltf": "0.128.1",
-                        "com.unity.ugui": "1.0.0"
-                    },
-                    "samples": [
-                        {
-                            "displayName": "SimpleViewer",
-                            "description": "VRM runtime loader sample",
-                            "path": "Samples~/SimpleViewer"
-                        },
-                        {
-                            "displayName": "FirstPersonSample",
-                            "description": "First Person layer sample with multi camera",
-                            "path": "Samples~/FirstPersonSample"
-                        },
-                        {
-                            "displayName": "RuntimeExporterSample",
-                            "description": "VRM runtime exporter sample",
-                            "path": "Samples~/RuntimeExporterSample"
-                        },
-                        {
-                            "displayName": "AnimationBridgeSample",
-                            "description": "BlendShape animation clip sample",
-                            "path": "Samples~/AnimationBridgeSample"
-                        }
-                    ],
-                    "publishConfig": {
-                        "registry": "https://package.openupm.com"
-                    },
-                    "vpmDependencies": {
-                        "com.vrmc.gltf": "0.128.1"
-                    },
-                    "legacyFolders": {
-                        "Assets/VRM": "75d26f96621a132458dec4d8f64e1e38"
-                    },
-                    "url": "https://esperecyan.github.io/VRMConverterForVRChat/packages/com.vrmc.univrm-0.128.1.zip",
-                    "zipSHA256": "f75138a3cfcf1f858f247c5c04692acee7d00b6d4123d954dfceb752fed06ff8"
                 }
             }
         },
