@@ -144,13 +144,13 @@ const setTheme = () => {
   rowPackageInfoButton.forEach((button) => {
     button.addEventListener('click', e => {
       const packageId = e.target.dataset?.packageId;
-      const packageInfo = PACKAGES?.[packageId];
+      const packageData = PACKAGES?.[packageId];
       #raw
-      if (!packageInfo) {
+      if (!packageData) {
         console.error(`Did not find package ${packageId}. Packages available:`, PACKAGES);
         return;
       }
-
+      const packageInfo = Object.values(packageData["versions"])[0];
 
       packageInfoName.textContent = packageInfo.displayName;
       packageInfoId.textContent = packageId;
@@ -181,7 +181,7 @@ const setTheme = () => {
       }
 
       packageInfoDependencies.innerHTML = null;
-      Object.entries(packageInfo.dependencies).forEach(([name, version]) => {
+      Object.entries(packageInfo.vpmDependencies).forEach(([name, version]) => {
         const depRow = document.createElement('li');
         depRow.classList.add('mb-2');
         depRow.textContent = `${name} @ v${version}`;
