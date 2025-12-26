@@ -1,10 +1,6 @@
 name: Build Repo Listing
 
-on: 
-  workflow_dispatch:
-  push:
-    branches: main
-    paths: index.json
+on: [push]
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
