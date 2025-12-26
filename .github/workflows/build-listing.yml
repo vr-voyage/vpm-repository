@@ -40,8 +40,7 @@ jobs:
       
       - name: Install dependencies
         run: |
-          pip install package1 package2 package3
-          # Add any other pip installations you need
+          pip install ct3
       
       - name: Run Python script
         run: |
