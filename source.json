@@ -2,7 +2,7 @@
     "name": "Voyage Voyage VRChat Gimmicks",
     "id": "io.github.vr-voyage",
     "url": "https://vr-voyage.github.io/vpm-repository/index.json",
-    "author": "Voyage Voyage",
+    "author": "@voyagevoyage_vr",
     "packages": {
         "io.github.vr-voyage.vrchat.glb-loader": {
             "versions": {
