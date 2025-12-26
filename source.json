@@ -1,28 +1,334 @@
 {
-    "name":"Example Listing",
-    "id":"com.vrchat.example-listing",
-    "url":"https://vrchat-community.github.io/template-package-listing/index.json",
-    "author":{
-        "email":"developer@vrchat.com",
-        "name":"VRChat",
-        "url":"https://hello.vrchat.com"
-    },
-    "description":"Example listing of VRChat packages",
-    "infoLink":{
-        "url":"http://github.com/vrchat-community/template-package-listing",
-        "text":"View on GitHub"
-    },
-    "bannerUrl":"banner.png",
-    "githubRepos":[
-        "vrchat-community/clientsim"
-    ],
-    "packages":[
-        {
-            "name":"com.vrchat.udonsharp",
-            "releases":[
-                "https://github.com/vrchat-community/UdonSharp/releases/download/1.1.7/com.vrchat.UdonSharp.zip",
-                "https://github.com/vrchat-community/UdonSharp/releases/download/1.1.6/com.vrchat.UdonSharp-1.1.6.zip"
-            ]
+    "name": "Voyage Voyage VRChat Gimmicks",
+    "id": "io.github.vr-voyage",
+    "url": "https://vr-voyage.github.io/vpm-repository/index.json",
+    "author": "Voyage Voyage",
+    "packages": {
+        "io.github.vr-voyage.vrchat.glb-loader": {
+            "versions": {
+                "1.1.0": {
+                    "name": "io.github.vr-voyage.vrchat.glb-loader",
+                    "displayName": "Voyage 3D Model Loader",
+                    "version": "1.1.0",
+                    "description": "VRChat World scripts and gimmicks to load 3D Models files at runtime. Currently only support GLB and VRM to a small extent.",
+                    "gitDependencies": {},
+                    "vpmDependencies": {
+                        "com.vrchat.worlds": ">=3.5.2-beta.2",
+                        "io.github.vr-voyage.vrchat.glb-loader.shaders": "1.0.1"
+                    },
+                    "repository": "https://github.com/vr-voyage/vrchat-glb-loader",
+                    "author": {
+                        "name": "Voyage Voyage",
+                        "email": "voyage@dontcontactmebymail.com",
+                        "url": "https://github.com/vr-voyage"
+                    },
+                    "legacyFolders": {},
+                    "legacyFiles": {},
+                    "unity": "2022.3",
+                    "unityRelease": "6f1",
+                    "url": "https://github.com/vr-voyage/vrchat-glb-loader/releases/download/v1.1.0/vrchat-glb-loader-v1.1.0.zip"
+                },
+                "1.0.1": {
+                    "name": "io.github.vr-voyage.vrchat.glb-loader",
+                    "displayName": "Voyage 3D Model Loader",
+                    "version": "1.0.1",
+                    "description": "Load 3D Models files like GLB/VRM at runtime.",
+                    "gitDependencies": {},
+                    "vpmDependencies": {
+                        "com.vrchat.worlds": ">=3.5.2-beta.2"
+                    },
+                    "author": {
+                        "name": "Voyage Voyage",
+                        "email": "voyage@dontcontactmebymail.com",
+                        "url": "https://github.com/vr-voyage"
+                    },
+                    "legacyFolders": {},
+                    "legacyFiles": {},
+                    "unity": "2022.3",
+                    "unityRelease": "6f1",
+                    "url": "https://github.com/vr-voyage/vrchat-glb-loader/releases/download/v1.0.1/vrchat-glb-loader-v1.0.1.zip"
+                }
+            }
+        },
+        "io.github.vr-voyage.vrchat.glb-loader.shaders": {
+            "versions": {
+                "1.0.1": {
+                    "name": "io.github.vr-voyage.vrchat.glb-loader.shaders",
+                    "displayName": "Voyage 3D Model Loader Shaders",
+                    "version": "1.0.1",
+                    "description": "Modified Shaders used by Voyage 3D Model Loader",
+                    "gitDependencies": {},
+                    "vpmDependencies": {},
+                    "author": {
+                        "name": "Voyage Voyage",
+                        "email": "voyage@miouyouyou.fr",
+                        "url": "https://github.com/vr-voyage"
+                    },
+                    "repository": "https://github.com/vr-voyage/vrchat-glb-loader-shaders",
+                    "publishConfig": {
+                        "registry": "https://npm.pkg.github.com"
+                    },
+                    "legacyFolders": {},
+                    "legacyFiles": {},
+                    "unity": "2022.3",
+                    "unityRelease": "6f1",
+                    "url": "https://github.com/vr-voyage/vrchat-glb-loader-shaders/releases/download/v1.0.1/vrchat-glb-loader-shaders-v1.0.1.zip"
+                },
+                "1.0.0": {
+                    "name": "io.github.vr-voyage.vrchat.glb-loader.shaders",
+                    "displayName": "Voyage 3D Model Loader Shaders",
+                    "version": "1.0.0",
+                    "description": "Modified shaders used by the 3D Model Loader",
+                    "gitDependencies": {},
+                    "vpmDependencies": {},
+                    "author": {
+                        "name": "Voyage Voyage",
+                        "email": "voyage@dontcontactmebymail.com",
+                        "url": "https://github.com/vr-voyage"
+                    },
+                    "legacyFolders": {},
+                    "legacyFiles": {},
+                    "unity": "2022.3",
+                    "unityRelease": "6f1",
+                    "url": "https://github.com/vr-voyage/vrchat-glb-loader-shaders/releases/download/v1.0.0/vrchat-glb-loader-shaders-v1.0.0.zip"
+                }
+            }
+        },
+        "io.github.vr-voyage.vrchat.glb-loader.utilities": {
+            "versions": {
+                "1.0.1": {
+                    "name": "io.github.vr-voyage.vrchat.glb-loader.utilities",
+                    "displayName": "Voyage 3D Model Loader Utilities",
+                    "version": "1.0.1",
+                    "description": "Utilities provided to convert Meshes to GLB file compatible with the VRChat Gimmick \"Voyage 3D Model Loader\"",
+                    "gitDependencies": {},
+                    "vpmDependencies": {
+                        "io.github.vr-voyage.vrchat.glb-loader.shaders": ">=1.0.0",
+                        "com.vrmc.vrm": ">=0.131.0"
+                    },
+                    "author": {
+                        "name": "Voyage Voyage",
+                        "email": "voyage@dontcontactmebymail.com",
+                        "url": "https://github.com/vr-voyage"
+                    },
+                    "legacyFolders": {},
+                    "legacyFiles": {},
+                    "unity": "2022.3",
+                    "url": "https://github.com/vr-voyage/vrchat-glb-loader-utils/releases/download/v1.0.1/vrchat-glb-loader-utils-v1.0.1.zip"
+                }
+            }
+        },
+        "io.github.vr-voyage.vrchat.glb-loader.tests": {
+            "versions": {
+                "1.0.0": {
+                    "name": "io.github.vr-voyage.vrchat.glb-loader.tests",
+                    "displayName": "Voyage 3D Model Loader Tests suite",
+                    "version": "1.0.0",
+                    "description": "Regression tests for my 3D Model Loader. While these run automatically within Unity, it still requires a Unity Installation and cannot be called 'Automated' tests per se.",
+                    "gitDependencies": {},
+                    "vpmDependencies": {
+                        "com.vrchat.worlds": ">=3.5.2",
+                        "io.github.vr-voyage.vrchat.glb-loader": ">=1.0.0"
+                    },
+                    "repository": "https://github.com/vr-voyage/vrchat-glb-loader",
+                    "author": {
+                        "name": "Voyage Voyage",
+                        "email": "voyage@dontcontactmebymail.com",
+                        "url": "https://github.com/vr-voyage"
+                    },
+                    "legacyFolders": {},
+                    "legacyFiles": {},
+                    "unity": "2022.3",
+                    "unityRelease": "6f1",
+                    "url": "https://github.com/vr-voyage/vrchat-glb-loader-tests/releases/download/v1.0.0/vrchat-glb-loader-tests-v1.0.0.zip"
+                }
+            }
+        },
+        "com.vrmc.univrm": {
+            "versions": {
+                "0.128.1": {
+                    "name": "com.vrmc.univrm",
+                    "version": "0.128.1",
+                    "displayName": "VRM",
+                    "description": "VRM importer",
+                    "unity": "2021.3",
+                    "keywords": [
+                        "vrm",
+                        "importer",
+                        "avatar",
+                        "vr"
+                    ],
+                    "author": {
+                        "name": "VRM Consortium"
+                    },
+                    "dependencies": {
+                        "com.vrmc.gltf": "0.128.1",
+                        "com.unity.ugui": "1.0.0"
+                    },
+                    "samples": [
+                        {
+                            "displayName": "SimpleViewer",
+                            "description": "VRM runtime loader sample",
+                            "path": "Samples~/SimpleViewer"
+                        },
+                        {
+                            "displayName": "FirstPersonSample",
+                            "description": "First Person layer sample with multi camera",
+                            "path": "Samples~/FirstPersonSample"
+                        },
+                        {
+                            "displayName": "RuntimeExporterSample",
+                            "description": "VRM runtime exporter sample",
+                            "path": "Samples~/RuntimeExporterSample"
+                        },
+                        {
+                            "displayName": "AnimationBridgeSample",
+                            "description": "BlendShape animation clip sample",
+                            "path": "Samples~/AnimationBridgeSample"
+                        }
+                    ],
+                    "publishConfig": {
+                        "registry": "https://package.openupm.com"
+                    },
+                    "vpmDependencies": {
+                        "com.vrmc.gltf": "0.128.1"
+                    },
+                    "legacyFolders": {
+                        "Assets/VRM": "75d26f96621a132458dec4d8f64e1e38"
+                    },
+                    "url": "https://esperecyan.github.io/VRMConverterForVRChat/packages/com.vrmc.univrm-0.128.1.zip",
+                    "zipSHA256": "f75138a3cfcf1f858f247c5c04692acee7d00b6d4123d954dfceb752fed06ff8"
+                }
+            }
+        },
+        "com.vrmc.vrm": {
+            "versions": {
+                "0.131.0": {
+                    "name": "com.vrmc.vrm",
+                    "version": "0.131.0",
+                    "displayName": "VRM-1.0",
+                    "description": "VRM-1.0 importer",
+                    "unity": "2021.3",
+                    "keywords": [
+                        "vrm",
+                        "importer",
+                        "avatar",
+                        "vr"
+                    ],
+                    "author": {
+                        "name": "VRM Consortium"
+                    },
+                    "dependencies": {
+                        "com.unity.timeline": "1.7.6",
+                        "com.vrmc.gltf": "0.131.0"
+                    },
+                    "samples": [
+                        {
+                            "displayName": "VRM10Viewer",
+                            "description": "VRM10 runtime loader sample",
+                            "path": "Samples~/VRM10Viewer"
+                        },
+                        {
+                            "displayName": "VRM10FirstPersonSample",
+                            "description": "First Person layer sample with multi camera",
+                            "path": "Samples~/VRM10FirstPersonSample"
+                        },
+                        {
+                            "displayName": "ClothSample",
+                            "description": "Experimental cloth implementation",
+                            "path": "Samples~/ClothSample"
+                        }
+                    ],
+                    "vpmDependencies": {
+                        "com.vrmc.gltf": "0.131.0"
+                    },
+                    "legacyFolders": {
+                        "Assets/VRM": "75d26f96621a132458dec4d8f64e1e38"
+                    },
+                    "url": "https://github.com/vr-voyage/UniVRM/releases/download/v0.131.0/vr-voyage-com.vrmc.vrm-v0.131.0.zip"
+                }
+            }
+        },
+        "com.vrmc.gltf": {
+            "versions": {
+                "0.128.1": {
+                    "name": "com.vrmc.gltf",
+                    "version": "0.128.1",
+                    "displayName": "UniGLTF",
+                    "description": "GLTF importer and exporter",
+                    "unity": "2021.3",
+                    "keywords": [
+                        "gltf"
+                    ],
+                    "author": {
+                        "name": "VRM Consortium"
+                    },
+                    "dependencies": {
+                        "com.unity.modules.animation": "1.0.0"
+                    },
+                    "samples": [
+                        {
+                            "displayName": "GltfViewer",
+                            "description": "UniGLTF runtime loader sample",
+                            "path": "Samples~/GltfViewer"
+                        }
+                    ],
+                    "publishConfig": {
+                        "registry": "https://package.openupm.com"
+                    },
+                    "vpmDependencies": {},
+                    "legacyFolders": {
+                        "Assets/UniGLTF": "49e44e391b2db4e41bd32306cf7c7af5",
+                        "Assets/MeshUtility": "f11c20c3f50e40b4f8f6259f8e0886e0",
+                        "Assets/VRMShaders": "503ae90aee4d0224db69e4e74762223b"
+                    },
+                    "legacyFiles": {
+                        "CombineMeshesAndSubMeshes.cs": null
+                    },
+                    "legacyPackages": [
+                        "com.vrmc.vrmshaders"
+                    ],
+                    "url": "https://esperecyan.github.io/VRMConverterForVRChat/packages/com.vrmc.gltf-0.128.1.zip",
+                    "zipSHA256": "7a06fb8ce534c792b851969fd337d2f85091313ad0371cf3966bf2650e910b61"
+                },
+                "0.131.0": {
+                    "name": "com.vrmc.gltf",
+                    "version": "0.131.0",
+                    "displayName": "UniGLTF",
+                    "description": "GLTF importer and exporter",
+                    "unity": "2021.3",
+                    "keywords": [
+                        "gltf"
+                    ],
+                    "author": {
+                        "name": "VRM Consortium"
+                    },
+                    "dependencies": {
+                        "com.unity.modules.animation": "1.0.0",
+                        "com.unity.modules.imgui": "1.0.0",
+                        "com.unity.modules.imageconversion": "1.0.0",
+                        "com.unity.test-framework": "1.4.6",
+                        "com.unity.mathematics": "1.2.6"
+                    },
+                    "samples": [
+                        {
+                            "displayName": "GltfViewer",
+                            "description": "UniGLTF runtime loader sample",
+                            "path": "Samples~/GltfViewer"
+                        }
+                    ],
+                    "vpmDependencies": {},
+                    "legacyFolders": {
+                        "Assets/UniGLTF": "49e44e391b2db4e41bd32306cf7c7af5",
+                        "Assets/MeshUtility": "f11c20c3f50e40b4f8f6259f8e0886e0",
+                        "Assets/VRMShaders": "503ae90aee4d0224db69e4e74762223b"
+                    },
+                    "legacyPackages": [
+                        "com.vrmc.vrmshaders"
+                    ],
+                    "url": "https://github.com/vr-voyage/UniVRM/releases/download/v0.131.0/vr-voyage-com.vrmc.gltf-v0.131.0.zip"
+                }
+            }
         }
-    ]
+    }
 }
