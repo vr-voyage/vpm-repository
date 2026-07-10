@@ -143,6 +143,8 @@ h1 {
   background-color: var(--neutral-fill-hover);
 }
 
+#listingInfo > h1 { color: white; }
+
 .m-0 {
   margin: 0;
 }
