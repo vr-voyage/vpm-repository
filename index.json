@@ -4,8 +4,76 @@
   "url": "https://vr-voyage.github.io/vpm-repository/index.json",
   "author": "Voyage Voyage",
   "packages": {
+        "io.github.vr-voyage.3d-model-loader": {
+      "versions": {
+        "1.2.0": {
+          "name": "io.github.vr-voyage.3d-model-loader",
+          "displayName": "Voyage 3D Model Loader",
+          "version": "1.2.0",
+          "description": "Provides an API to load 3D Models in-game",
+          "gitDependencies": {},
+          "vpmDependencies": {
+            "io.github.vr-voyage.vrchat.glb-loader": ">=1.2.0"
+          },
+          "author": {
+            "name": "Voyage Voyage",
+            "email": "voyage@dontcontactmebymail.com",
+            "url": "https://github.com/vr-voyage"
+          },
+          "legacyFolders": {},
+          "legacyFiles": {},
+          "unity": "2022.3",
+          "url": "https://github.com/vr-voyage/vrchat-3d-model-loader/releases/download/v1.2.0/vrchat-3d-model-loader-v1.2.0.zip"
+        }
+      }
+    },
+    "io.github.vr-voyage.3d-model-loader.tablet": {
+      "versions": {
+        "1.0.0": {
+          "name": "io.github.vr-voyage.3d-model-loader.tablet",
+          "displayName": "Voyage 3D Model Loader Tablet",
+          "version": "1.0.0",
+          "description": "Provides a tablet to load 3D Models in-game",
+          "gitDependencies": {},
+          "vpmDependencies": {
+            "io.github.vr-voyage.3d-model-loader": ">=1.2.0"
+          },
+          "author": {
+            "name": "Voyage Voyage",
+            "email": "voyage@dontcontactmebymail.com",
+            "url": "https://github.com/vr-voyage"
+          },
+          "legacyFolders": {},
+          "legacyFiles": {},
+          "unity": "2022.3",
+          "url": "https://github.com/vr-voyage/vrchat-3d-model-loader-tablet/releases/download/v1.0.0/vrchat-3d-model-loader-tablet-v1.0.0.zip"
+        }
+      }
+    },
     "io.github.vr-voyage.vrchat.glb-loader": {
       "versions": {
+        "1.2.0": {
+          "name": "io.github.vr-voyage.vrchat.glb-loader",
+          "displayName": "Voyage GLB Loader",
+          "version": "1.2.0",
+          "description": "Provides an API to load GLTF Binary and VRM models in-game. This also provides a quick download UI sample.",
+          "gitDependencies": {},
+          "vpmDependencies": {
+            "com.vrchat.worlds": ">=3.6.0",
+            "io.github.vr-voyage.vrchat.glb-loader.shaders": "1.0.2"
+          },
+          "repository": "https://github.com/vr-voyage/vrchat-glb-loader",
+          "author": {
+            "name": "Voyage Voyage",
+            "email": "voyage@dontcontactmebymail.com",
+            "url": "https://github.com/vr-voyage"
+          },
+          "legacyFolders": {},
+          "legacyFiles": {},
+          "unity": "2022.3",
+          "unityRelease": "6f1",
+          "url": "https://github.com/vr-voyage/vrchat-glb-loader/releases/download/v1.2.0/vrchat-glb-loader-v1.2.0.zip"
+        },
         "1.1.1": {
           "name": "io.github.vr-voyage.vrchat.glb-loader",
           "displayName": "Voyage 3D Model Loader",
