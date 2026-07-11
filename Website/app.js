@@ -2,7 +2,7 @@
 #extends Template
 #import json
 
-import { baseLayerLuminance, StandardLuminance } from 'https://unpkg.com/@fluentui/web-components';
+import { baseLayerLuminance, StandardLuminance } from 'https://unpkg.com/@fluentui/web-components@2.5.16';
 
 const LISTING_URL = "$repository['url']";
 
